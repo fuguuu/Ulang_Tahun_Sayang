@@ -1,306 +1,444 @@
+/* =========================
+   RESET
+========================= */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
-    }
-    
-    body{
+}
 
-background:
-radial-gradient(
-circle at center,
-#141414,
-#000000
-);
+/* =========================
+   BODY
+========================= */
+
+body{
+    background:
+    radial-gradient(
+        circle at center,
+        #1a1a2e 0%,
+        #111827 40%,
+        #000000 100%
+    );
+
+    color:#ffffff;
+    overflow:hidden;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+#stars{
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(255,255,255,.05),
+        transparent 70%
+    );
+
+    z-index:-2;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+h1,
+h2,
+h3,
+p{
+
+    color:#ffffff;
+
+    text-shadow:
+    0 2px 8px rgba(0,0,0,.9),
+    0 0 15px rgba(0,0,0,.7);
 
 }
 
 h1{
-
-text-shadow:
-0 0 15px rgba(255,215,0,.4),
-0 0 40px rgba(255,215,0,.2);
-
-}
-    
-    #stars{
-    position:fixed;
-    inset:0;
-    background:
-    radial-gradient(circle at center,#1a1a2e,#000);
-    z-index:-1;
-    }
-    
-.slide{
-
-position:absolute;
-top:0;
-left:0;
-
-width:100%;
-height:100vh;
-
-display:flex;
-flex-direction:column;
-justify-content:center; /* kembali ke tengah */
-align-items:center;
-
-text-align:center;
-
-padding:20px;
-
-opacity:0;
-pointer-events:none;
-
-transform:scale(1.05);
-
-transition:all .8s ease;
-
-overflow-y:auto;
-overflow-x:hidden;
-
-}
-
-#slide5{
-
-justify-content:flex-start;
-
-padding-top:30px;
-
-}
-    
-    .slide.active{
-    
-    opacity:1;
-    pointer-events:auto;
-    transform:scale(1);
-    
-    }
-    
-    h1{
     font-size:4rem;
     margin-bottom:20px;
-    }
-    
-    h2{
+}
+
+h2{
     font-size:2rem;
     margin-bottom:15px;
-    }
-    
-    h3{
+}
+
+h3{
     margin-bottom:15px;
-    }
-    
-    p{
+}
+
+p{
     max-width:800px;
     line-height:1.8;
     margin-bottom:20px;
-    }
-    
-    .gold{
-    
+}
+
+/* =========================
+   GOLD TITLE
+========================= */
+
+.gold{
+
     background:
     linear-gradient(
-    90deg,
-    #ffffff,
-    #ffd700,
-    #ffffff
+        90deg,
+        #fff8dc,
+        #ffd700,
+        #fff8dc
     );
-    
+
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
-    
-    }
-    
-    button{
-    
-    padding:12px 24px;
-    font-size:.95rem;
-    
-    border:none;
-    
-    border-radius:50px;
-    
-    cursor:pointer;
-    
-    font-size:1rem;
-    
-    margin-top:20px;
-    
-    }
-    
-    .gallery{
 
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        
-        width:100%;
-        min-height:75vh;
-        
-        position:relative;
-        
-        }
-        
-        .gallery img{
-        
-        max-width:90vw;
-        max-height:45vh;
-        
-        width:auto;
-        height:auto;
-        
-        object-fit:contain;
-        
-        border-radius:20px;
-        
-        box-shadow:0 0 30px rgba(255,255,255,.15);
-        
-        transition:all .5s ease;
-        
-        }
-    
-    .gallery-buttons{
-    
-    display:flex;
-    
-    gap:15px;
-    
-    margin-top:15px;
-    margin-bottom:15px;
-    
-    flex-wrap:wrap;
-    
-    justify-content:center;
-    
-    }
-
-    .gallery-bg{
-
-        position:absolute;
-        
-        top:0;
-        left:0;
-        
-        width:100%;
-        height:100%;
-        
-        background-size:cover;
-        background-position:center;
-        
-        filter:blur(30px);
-        
-        transform:scale(1.2);
-        
-        opacity:.25;
-        
-        z-index:-1;
-        
-        transition:all .5s ease;
-        
-        }    
-    
-    .envelope{
-    
-    font-size:120px;
-    
-    cursor:pointer;
-    
-    transition:.3s;
-    
-    }
-    
-    .envelope:hover{
-    
-    transform:scale(1.1);
-    
-    }
-    
-    .hidden{
-    
-    display:none;
-    
-    }
-    
-    #letter{
-    
-    max-width:700px;
-    
-    padding:25px;
-    
-    border-radius:20px;
-    
-    background:
-    rgba(255,255,255,.08);
-    
-    backdrop-filter:blur(10px);
-    
-    }
-
-    .signature{
-
-position:fixed;
-
-bottom:15px;
-left:0;
-
-width:100%;
-
-text-align:center;
-
-font-size:.75rem;
-
-letter-spacing:1px;
-
-opacity:.45;
-
-pointer-events:none;
-
-z-index:999;
+    filter:
+    drop-shadow(
+        0 0 10px rgba(255,215,0,.8)
+    );
 
 }
-    
-    @media(max-width:768px){
-    
-    h1{
-    font-size:2.5rem;
-    }
-    
-    h2{
-    font-size:1.5rem;
-    }
-    
-    .gallery img{
-    
-    height:45vh;
-    
-    }
-    
-    }
 
-    @media(max-width:768px){
+/* =========================
+   SLIDE
+========================= */
 
 .slide{
 
-justify-content:flex-start;
+    position:absolute;
+    top:0;
+    left:0;
 
-padding-top:40px;
-padding-bottom:40px;
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+
+    opacity:0;
+    pointer-events:none;
+
+    transform:scale(1.05);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+}
+
+.slide.active{
+
+    opacity:1;
+    pointer-events:auto;
+    transform:scale(1);
+
+}
+
+/* =========================
+   GALLERY SLIDE
+========================= */
+
+#slide5{
+
+    justify-content:flex-start;
+    padding-top:30px;
+
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button{
+
+    padding:14px 28px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:1rem;
+    font-weight:600;
+
+    background:#ffd700;
+    color:#000;
+
+    transition:.3s;
+
+    margin-top:20px;
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 5px 20px rgba(255,215,0,.4);
+
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    min-height:65vh;
+
+    position:relative;
 
 }
 
 .gallery img{
 
-max-width:95vw;
-max-height:50vh;
+    max-width:90vw;
+    max-height:60vh;
+
+    width:auto;
+    height:auto;
+
+    object-fit:contain;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 0 30px rgba(255,255,255,.15);
+
+    transition:.5s;
 
 }
 
-button{
+/* =========================
+   GALLERY BG
+========================= */
 
-margin-top:15px;
+.gallery-bg{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background-size:cover;
+    background-position:center;
+
+    filter:blur(30px);
+
+    transform:scale(1.2);
+
+    opacity:.18;
+
+    z-index:-1;
+
+    transition:.5s;
 
 }
+
+.gallery-bg::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:
+    rgba(0,0,0,.55);
+
+}
+
+/* =========================
+   GALLERY BUTTON
+========================= */
+
+.gallery-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:15px;
+    margin-bottom:15px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+/* =========================
+   ENVELOPE
+========================= */
+
+.envelope{
+
+    font-size:120px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.envelope:hover{
+
+    transform:scale(1.1);
+
+}
+
+/* =========================
+   LETTER
+========================= */
+
+.hidden{
+    display:none;
+}
+
+#letter{
+
+    max-width:700px;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    border:
+    1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,.4);
+
+}
+
+/* =========================
+   SIGNATURE
+========================= */
+
+.signature{
+
+    position:fixed;
+
+    bottom:12px;
+    left:0;
+
+    width:100%;
+
+    text-align:center;
+
+    font-size:.8rem;
+
+    color:
+    rgba(255,255,255,.75);
+
+    letter-spacing:1px;
+
+    pointer-events:none;
+
+    z-index:999;
+
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+    width:6px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:
+    rgba(255,255,255,.2);
+    border-radius:10px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2.2rem;
+    }
+
+    h2{
+        font-size:1.4rem;
+    }
+
+    h3{
+        font-size:1rem;
+    }
+
+    p{
+        font-size:.95rem;
+    }
+
+    .slide{
+        padding:25px;
+    }
+
+    .gallery{
+
+        min-height:55vh;
+
+    }
+
+    .gallery img{
+
+        max-width:95vw;
+        max-height:50vh;
+
+    }
+
+    button{
+
+        font-size:.9rem;
+        padding:12px 22px;
+
+    }
+
+    .envelope{
+
+        font-size:90px;
+
+    }
 
 }
