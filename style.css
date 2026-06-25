@@ -6,10 +6,23 @@
     }
     
     body{
-    background:#000;
-    color:#fff;
-    overflow:hidden;
-    }
+
+background:
+radial-gradient(
+circle at center,
+#141414,
+#000000
+);
+
+}
+
+h1{
+
+text-shadow:
+0 0 15px rgba(255,215,0,.4),
+0 0 40px rgba(255,215,0,.2);
+
+}
     
     #stars{
     position:fixed;
@@ -30,7 +43,7 @@ height:100vh;
 
 display:flex;
 flex-direction:column;
-justify-content:center;
+justify-content:center; /* kembali ke tengah */
 align-items:center;
 
 text-align:center;
@@ -44,9 +57,16 @@ transform:scale(1.05);
 
 transition:all .8s ease;
 
-/* Tambahan */
 overflow-y:auto;
 overflow-x:hidden;
+
+}
+
+#slide5{
+
+justify-content:flex-start;
+
+padding-top:30px;
 
 }
     
@@ -217,6 +237,29 @@ overflow-x:hidden;
     backdrop-filter:blur(10px);
     
     }
+
+    .signature{
+
+position:fixed;
+
+bottom:15px;
+left:0;
+
+width:100%;
+
+text-align:center;
+
+font-size:.75rem;
+
+letter-spacing:1px;
+
+opacity:.45;
+
+pointer-events:none;
+
+z-index:999;
+
+}
     
     @media(max-width:768px){
     
