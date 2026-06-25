@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Rini</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="stars"></div>
+
+<audio id="bgm" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- SLIDE 1 -->
+
+<div class="slide active" id="slide1">
+
+    <h3>✨ Sebuah Kejutan Sudah Aku Siapkan ✨</h3>
+
+    <h1>Untuk Sayangku</h1>
+
+    <button onclick="startShow()">
+        Buka Kejutan
+    </button>
+
+</div>
+
+<!-- SLIDE 2 -->
+
+<div class="slide" id="slide2">
+
+    <h2>
+        Di antara jutaan detik yang telah berlalu...
+    </h2>
+
+    <p>
+        Ada satu hari yang selalu istimewa.
+    </p>
+
+    <button onclick="showSlide(3)">
+        Lanjut ➡
+    </button>
+
+</div>
+
+<!-- SLIDE 3 -->
+
+<div class="slide" id="slide3">
+
+    <h1 class="gold">
+        Rini Maulida Nurhasanah
+    </h1>
+
+    <h2>
+        Happy 26th Birthday 🎂
+    </h2>
+
+    <button onclick="showSlide(4)">
+        Lanjut ➡
+    </button>
+
+</div>
+
+<!-- SLIDE 4 -->
+
+<div class="slide" id="slide4">
+
+    <h2>Perjalanan Baru</h2>
+
+    <p>
+        Setiap tahun membawa cerita baru.
+    </p>
+
+    <p>
+        Setiap langkah meninggalkan jejak berharga.
+    </p>
+
+    <p>
+        Dan hari ini adalah salah satu halaman terindah.
+    </p>
+
+    <button onclick="showSlide(5)">
+        Lanjut ➡
+    </button>
+
+</div>
+
+<!-- SLIDE 5 -->
+
+<div class="slide" id="slide5">
+
+  <div class="gallery-bg" id="galleryBg"></div>
+
+  <h2>Galeri Kenangan 📸</h2>
+
+  <div class="gallery">
+
+      <img id="galleryImage"
+           src="assets/1.jpeg"
+           alt="Gallery">
+
+  </div>
+
+  <div class="gallery-buttons">
+
+      <button onclick="prevPhoto()">
+          ⬅ Sebelumnya
+      </button>
+
+      <button onclick="nextPhoto()">
+          Berikutnya ➡
+      </button>
+
+  </div>
+
+  <button onclick="showSlide(6)">
+      Buka Surat 💌
+  </button>
+
+</div>
+
+<!-- SLIDE 6 -->
+
+<div class="slide" id="slide6">
+
+    <div class="envelope" onclick="openLetter()">
+        💌
+    </div>
+
+    <div id="letter" class="hidden">
+
+        <h2>Untuk Sayang</h2>
+
+        <p>
+
+            <br><br>
+
+            Semoga kebahagiaan,
+            kesehatan,
+            dan semua impian baik
+            selalu menyertaimu.
+            Tetap jadi diri sendiri,
+            I LOVE YOU ❤️❤️❤️
+
+        </p>
+
+        <button onclick="showSlide(7)">
+            Lanjut ➡
+        </button>
+
+    </div>
+
+</div>
+
+<!-- SLIDE 7 -->
+
+<div class="slide" id="slide7">
+
+    <h1>🎆 SELAMAT ULANG TAHUN SAYANG 🎆</h1>
+
+    <h2>Rini Maulida Nurhasanah</h2>
+
+    <h3>26 Years Old ✨</h3>
+
+    <button onclick="showSlide(8)">
+        Lanjut ➡
+    </button>
+
+</div>
+
+<!-- SLIDE 8 -->
+
+<div class="slide" id="slide8">
+
+    <h1>
+        Thank You For Being You ❤️
+    </h1>
+
+    <p>
+        Semoga hari ini menjadi awal dari cerita-cerita indah berikutnya.
+    </p>
+
+    <button onclick="restart()">
+        Putar Ulang
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
